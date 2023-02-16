@@ -1,0 +1,43 @@
+
+<%- include ("./parts/head.ejs") %>
+
+<body>
+  <%- include ("./parts/nav.ejs") %>
+  <%- include ("./parts/menu.ejs")%>
+  <div id="item-2">
+       
+    <form class="formulario" method="post" action="#">
+          
+      <div class="metade left">
+    
+        <input type="text" placeholder="Nome" required="">
+        <input type="number" placeholder="CPF" required="">
+        <input type="text" placeholder="Cep" required="">
+        <input type="email" placeholder="E-mail" required="">
+        
+
+      </div>
+    
+      <div class="metade right">
+        <textarea name="mensagem" type="text" placeholder="Detalhes" required=""></textarea>
+      </div>  
+    
+      <input type="submit" value="Enviar Dados" class="btn-submit">
+    
+    </form>
+
+
+
+
+  </div>
+  <%- include ("./parts/rodape.ejs") %>
+    
+ 
+    <div id="item-4">
+      <img  src="./img/logo.png" alt="" >
+    </div>
+  </div>
+
+</body>
+
+</html>
