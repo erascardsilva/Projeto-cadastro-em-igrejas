@@ -24,7 +24,7 @@
  }
  #item-1 {
  
-    background-color: #385b94; 
+    background-color: #d0d9e6; 
     grid-row-start: 2;
     grid-column-start: 1;
  
@@ -48,7 +48,7 @@
  }
  #item-3 {
  
-    background-color: #8c75f1; 
+    background-color: #a0a0a0; 
     grid-row-start: 3;
     grid-column-start: 2;
  
@@ -61,7 +61,7 @@
  }
  #item-4 {
  
-    background-color: #2b4c81; 
+    background-color: #1a4ae6; 
     grid-row-start: 1;
     grid-column-start: 1;
     display: block;
