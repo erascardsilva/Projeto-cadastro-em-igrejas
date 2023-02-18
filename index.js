@@ -47,5 +47,13 @@ app.get("/cadastrar", (req,res) =>{
     res.render("cadastrar")
 });
 
+app.get("/verifcadastro", (req,res) =>{
+    res.render("verifcadastro")
+});
+
+app.get("/sobre", (req,res)=>{
+    res.render("sobre")
+});
+
 //servidor online
 app.listen(3000, () => { console.log("http://localhost:3000/") })
