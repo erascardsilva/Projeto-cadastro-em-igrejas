@@ -352,7 +352,7 @@ nav a:focus {
   
   .formulario textarea {
   
-	height: 190px;
+	height: 238px;
 	width: 73%;
   
   }
@@ -374,6 +374,8 @@ nav a:focus {
 	.metade { width:100%; float:none; margin-bottom:0; }
   
   }
+
+  /*mensagem*/
 
   .texto-animado { 
 
