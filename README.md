@@ -3,6 +3,7 @@
  Node.js | express | Sqlite3 | Sequelize 
  Ja funcional entrada de dados no banco de dados , verificação de dados gravados , mensagens biblicas na abertura
  do App e efeitos de transição do menu
+ ___________________________________________________________________________________________________________________
  
  Ingles
  #Project-registration-in-churches
