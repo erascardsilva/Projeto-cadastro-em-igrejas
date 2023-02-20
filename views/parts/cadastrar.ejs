@@ -1,20 +1,22 @@
       
-    <form class="formulario" method="post" action="#">
-          
-      <div class="metade left">
-    
-        <input type="text" placeholder="Nome" required="">
-        <input type="number" placeholder="CPF" required="">
-        <input type="text" placeholder="Cep" required="">
-        <input type="email" placeholder="E-mail" required="">
-        
+      <form class="formulario" method="post" action="/rotaform">
+                
+        <div class="metade left">
 
-      </div>
-    
-      <div class="metade right">
-        <textarea name="mensagem" type="text" placeholder="Detalhes" required=""></textarea>
-      </div>  
-    
-      <input type="submit" value="Enviar Dados" class="btn-submit">
-    
-    </form>
+          <input type="text" placeholder="Nome" required="" name="nome">
+          <input type="number" placeholder="CPF" required="" name="cpf" >
+          <input type="text" placeholder="Cep" required="" name="cep" >
+         
+
+
+        </div>
+
+        <div class="metade right">
+          <input type="text" placeholder="Endereço" required="" name="endereco" >
+          <input type="phone" placeholder="Telefone"  required="" name="telefone">
+          <input type="date" placeholder="Data Aniversario" required="" name="data">
+        </div>
+
+        <input type="submit" value="Enviar Dados" class="btn-submit">
+
+      </form>

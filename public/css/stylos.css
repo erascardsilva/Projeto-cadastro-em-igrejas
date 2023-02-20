@@ -303,7 +303,7 @@ nav a:focus {
   
   }
   
-  .formulario input, form textarea {
+  .formulario input, form  {
   
 	border: 0;
 	outline: 0;
@@ -337,7 +337,7 @@ nav a:focus {
 	color: #fff;
 	background: #3cafe7 ;
 	cursor: pointer;
-	transition: 0.5s;
+ 	transition: 0.5s;
   
   }
   
@@ -350,12 +350,7 @@ nav a:focus {
   
   }
   
-  .formulario textarea {
   
-	height: 238px;
-	width: 73%;
-  
-  }
   
   .metade {
   

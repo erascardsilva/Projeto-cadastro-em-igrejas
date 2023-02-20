@@ -1,23 +1,22 @@
 {
-  "name": "cadastro_clientes",
+  "name": "projeto_igreja",
   "version": "1.0.0",
-  "description": "",
+  "description": "projeto membros cadastro",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node index.js"
+    "start": "node main.js"
   },
-  "author": "",
+  "author": "Erasmo Cardoso",
   "license": "ISC",
   "dependencies": {
     "ejs": "^3.1.8",
     "express": "^4.18.2",
-    "parse": "^4.0.1",
-    "path": "^0.12.7",
+    "moongose": "^1.0.0",
     "sequelize": "^6.28.0",
-    "sqlite3": "^5.1.4"
-  },
-  "devDependencies": {
-    "webpack": "^5.75.0"
+    "sequelize-cli": "^6.6.0",
+    "session": "^0.1.0",
+    "sqlite3": "^5.1.4",
+    "sqllite": "^1.1.2"
   }
 }
