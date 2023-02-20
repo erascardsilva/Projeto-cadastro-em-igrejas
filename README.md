@@ -12,7 +12,9 @@
  Already functional data entry in the database, verification of recorded data, biblical messages in the opening
  App and menu transition effects
 ____________________________________________________________________________________________________________________
-![image](https://user-images.githubusercontent.com/70297459/219554435-d899ebd6-eaad-437f-ac2a-1ba071178730.png)
+
+![image](https://user-images.githubusercontent.com/70297459/220214175-2f6615b2-964e-4670-bc7b-8d90a0f9692b.png)
+
  ___________________________________________________________________________________________________________________
 
 !![image](https://user-images.githubusercontent.com/70297459/220189305-48fcbc55-5cf2-4eb5-bb73-0f41d8961342.png)
