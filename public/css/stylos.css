@@ -338,6 +338,7 @@ nav a:focus {
 	background: #3cafe7 ;
 	cursor: pointer;
  	transition: 0.5s;
+  width: 20%;
   
   }
   
@@ -360,7 +361,7 @@ nav a:focus {
   
   }
   
-  .right { width:50%;}
+  .right { width:48%;}
   
   .left  { margin-right:2%; }
   
@@ -690,3 +691,11 @@ nav a:focus {
 
 }
 
+.botao_apag{
+  background-color: rgb(182, 6, 6);
+  color: white;
+ }
+ .botao_edit{
+  background-color: rgba(60, 250, 13, 0.63);
+  color: rgb(10, 0, 0);
+ }

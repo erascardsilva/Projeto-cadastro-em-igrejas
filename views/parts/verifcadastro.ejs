@@ -11,7 +11,9 @@
         <td class="top center"><strong>Nome</strong></td>
         <td class="top center"><strong>Telefone</strong></td>
         <td class="top center"><strong>Idade</strong></td>
-        <td class="top center" colspan="2" width="1"><strong>Endereço</strong></td>
+        <td class="top center"><strong>Endereço</strong></td>
+        <td class="top center"><strong>Editar</strong></td>
+        <td class="top center"><strong>Apagar</strong></td>
       </tr>
     </tbody>
 
@@ -25,11 +27,18 @@
         <td align="center"><%= verdados.telefone %></td>
         <% let dataAniversario = new Date(verdados.data); %>
         <% let ano = dataAniversario; %>
-        <td align="center"><%= data.getFullYear() - ano.getFullYear() %> <strong>
-        <td align="center"><%= verdados.endereco %> <strong> 
-        <td align="center"> <a href="#" class="editar fa fa-check-circle" title="Editar"></a> </td>
-        <td align="center"> <a href="#" class="deletar fa fa-times-circle" title="Deletar"></a> </td>
+        <td align="center"><%= data.getFullYear() - ano.getFullYear() %> </td>
+        <td align="center"><%= verdados.endereco %> </td>
 
+        <form action="/editacadastro" method="post"></form>
+        <input type="hidden" name="id" value="<%= verdados.id %>">
+        <td align="center"> <button class="botao_edit" >Edita</button></a> </td>
+        </form>
+
+        <form action="/delete" method="post">
+          <input type="hidden" name="id" value="<%= verdados.id %>">
+        <td align="center"> <button class="botao_apag" >Apaga</button> </td>
+        </form>
       </tr>
       <% }); %>
       
@@ -39,17 +48,3 @@
 
   </table>
 </div>
-<!--tabela-->
-     
-      
-      
-      
-       
-<script>
-  //Código jQuery para adicionar o efeito zebra na tabela.
-  $(document).ready(function () {
-    $('#tabela tbody tr:odd').addClass('impar');
-    //$('#tabela tbody tr:even').addClass('par');
-
-  });
-</script>

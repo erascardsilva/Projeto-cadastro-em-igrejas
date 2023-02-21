@@ -18,6 +18,7 @@ const sqlite3 = require('sqlite3').verbose();
 const db = new sqlite3.Database('./database/database.db');
 const connection = require('./database/database');
 const GravaDados = require("./database/Cadastrograva");
+const { GEOGRAPHY } = require('sequelize');
 console.log(connection);
 
 //teste banco de dados
@@ -82,7 +83,7 @@ app.post("/rotaform", (req,res) =>{
         data: data,
         telefone: telefone || null
     }).then(()=>{
-        res.redirect("/");
+        res.redirect("/cadastrar");
     })
       
 })
@@ -103,6 +104,47 @@ app.get("/verifcadastro/:id", (req,res) => {
         // Se ocorreu um erro ao buscar o registro, envie uma mensagem de erro
         res.status(500).send("Erro ao buscar registro.");
     });
+});
+
+app.post("/delete", (req, res) => {
+    let id = req.body.id;
+
+    if (id != undefined) {
+        if (!isNaN(id)) {
+            GravaDados.destroy({
+                where: {
+                    id: id
+                }
+            }).then(() => {
+                res.redirect("/verifcadastro");
+            });
+        } else {
+            // Trate o erro quando o id não é um número
+            res.redirect("/");
+        }
+    } else {
+        // Trate o erro quando o id é indefinido
+        res.redirect("/");
+    }
+});
+
+app.get("/editacadastro/:id",(req,res) => {
+    let id = req.params.id;
+
+   GravaDados.findByPk(id).then(edita => {
+        if(edita != undefined){
+            res.redirect("/")
+        }else{
+            res.render("cadastrar");
+        }
+   }).catch(erro =>{
+    res.render("/");
+
+   })
+   
+   
+      
+    
 });
 
 
