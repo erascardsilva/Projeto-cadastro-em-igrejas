@@ -13,18 +13,13 @@
  App and menu transition effects
 ____________________________________________________________________________________________________________________
 
-![image](https://user-images.githubusercontent.com/70297459/220214175-2f6615b2-964e-4670-bc7b-8d90a0f9692b.png)
-
+![image](https://user-images.githubusercontent.com/70297459/220531343-d1c70607-c63f-48ba-a43f-e62f9af4065d.png)
  ___________________________________________________________________________________________________________________
-
-!![image](https://user-images.githubusercontent.com/70297459/220189305-48fcbc55-5cf2-4eb5-bb73-0f41d8961342.png)
+![image](https://user-images.githubusercontent.com/70297459/220531417-dd83df8d-ab5c-4518-b1b7-11da4c92d5df.png)
  ___________________________________________________________________________________________________________________
-
-![image](https://user-images.githubusercontent.com/70297459/220223845-e7a9c627-de96-4b50-91a7-fd5e533538e5.png)
+![image](https://user-images.githubusercontent.com/70297459/220531485-c3e9aca4-91e0-4d05-bc43-ce8fc7ed1865.png)
  ___________________________________________________________________________________________________________________
- 
-![image](https://user-images.githubusercontent.com/70297459/220499414-70663fa0-e23e-48b9-a47f-123a6587c15f.png)
-
+ ![image](https://user-images.githubusercontent.com/70297459/220531567-bf07a8f8-cf1d-466d-984a-d833c00c498c.png)
 ___________________________________________________________________________________________________________________
-![image](https://user-images.githubusercontent.com/70297459/219822820-50386a05-317f-4897-a852-f9b550e1060f.png)
+![image](https://user-images.githubusercontent.com/70297459/220531622-0370548a-1769-4c0b-9ccd-d83de0aac8fe.png)
 
