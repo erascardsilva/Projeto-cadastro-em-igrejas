@@ -87,24 +87,6 @@ app.post("/rotaform", (req,res) =>{
     })
       
 })
-app.get("/verifcadastro/:id", (req,res) => {
-    const id = req.params.id;
-
-    GravaDados.findAll({
-        where : {ID : id}
-    }).then(registro => {
-        if (registro) {
-            // Se encontrou um registro com o ID especificado, envie os dados como resposta
-            res.send("Ok UFA")
-        } else {
-            // Se não encontrou um registro com o ID especificado, envie uma mensagem de erro
-            res.status(404).send("Registro não encontrado.");
-        }
-    }).catch(erro => {
-        // Se ocorreu um erro ao buscar o registro, envie uma mensagem de erro
-        res.status(500).send("Erro ao buscar registro.");
-    });
-});
 
 app.post("/delete", (req, res) => {
     let id = req.body.id;
@@ -128,27 +110,85 @@ app.post("/delete", (req, res) => {
     }
 });
 
-app.get("/editacadastro/:id",(req,res) => {
-    let id = req.params.id;
+app.get("/editacadastro",(req,res) =>{
+    res.render("editacadastro");
+})
 
+app.get("/edita",(req,res) => {
+    let id = req.body.id;
+  
    GravaDados.findByPk(id).then(edita => {
         if(edita != undefined){
-            res.redirect("/")
+            res.redirect("/editacadastro" , {edita})
+            console.log(edita);
         }else{
             res.render("cadastrar");
         }
    }).catch(erro =>{
-    res.render("/");
+    res.render("index");
 
    })
-   
-   
       
-    
 });
 
+app.get("/editacadastro/:id", (req, res) => {
+    let id = req.params.id;
+    
+    GravaDados.findByPk(id)
+      .then(edita => {
+        if (edita !== null) {
+          res.render("editacadastro", { edita: edita });
+        } else {
+          res.render("index");
+        }
+      })
+      .catch(erro => {
+        console.error(erro);
+        res.render("error", { message: "Erro ao buscar o registro", error: erro });
+      });
+  });
+  
+
+  app.post("/atualiza", (req, res) => {
+    let id = req.body.id;
+    let nome = req.body.nome;
+    let cpf = req.body.cpf;
+    let cep = req.body.cep;
+    let endereco = req.body.endereco;
+    let data = req.body.data;
+    let telefone = req.body.telefone;
+  
+    if (!id) {
+      res.status(400).send("ID inválido");
+      return;
+    }
+  
+    GravaDados.update(
+      {
+        nome: nome,
+        cpf: cpf,
+        cep: cep,
+        endereco: endereco,
+        data: data,
+        telefone: telefone || null,
+      },
+      {
+        where: {
+          id: id,
+        },
+      }
+    )
+      .then(() => {
+        res.redirect("/verifcadastro");
+      })
+      .catch((err) => {
+        console.error(err);
+        res.status(500).send("Erro ao atualizar registro");
+      });
+  });
+  
 
 //servidor online
 app.listen(3000, () => {
     console.log("http://localhost:3000/")
-})
+});

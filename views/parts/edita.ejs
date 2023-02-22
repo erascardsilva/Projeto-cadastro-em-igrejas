@@ -1,22 +1,22 @@
       
-      <form class="formulario" method="post" action="/rotaform">
-                
+      <form class="formulario" method="post" action="/atualiza">
+                <center><h2>Atualize o Cadastro Número :  <%= edita.id %></h2> </center>
         <div class="metade left">
-
-          <input type="text" placeholder="Nome" required="" name="nome">
-          <input type="number" placeholder="CPF" required="" name="cpf" >
-          <input type="text" placeholder="Cep" required="" name="cep" >
+          <input type="hidden" placeholder="<%=edita.id %>" required="" name="id" value="<%=edita.id %>">
+          <input type="text" placeholder="Nome" required="" name="nome" value="<%=edita.nome %>">
+          <input type="number" placeholder="CPF" required="" name="cpf" value="<%=edita.cpf %>" >
+          <input type="text" placeholder="Cep" required="" name="cep"   value="<%=edita.cep %>">
          
 
 
         </div>
 
         <div class="metade right">
-          <input type="text" placeholder="Endereço" required="" name="endereco" >
-          <input type="phone" placeholder="Telefone"  required="" name="telefone">
-          <input type="date" placeholder="Data Aniversario" required="" name="data">
+          <input type="text" placeholder="Endereço" required="" name="endereco" value="<%=edita.endereco %>">
+          <input type="phone" placeholder="Telefone"  required="" name="telefone" value="<%=edita.telefone %>">
+          <input type="date" placeholder="Data Aniversario" required="" name="data" value="<%= edita.data %>">
         </div>
 
-        <input type="submit" value="Editar " class="btn-submit">
+        <input type="submit" value="Enviar Dados" class="btn-submit">
 
       </form>

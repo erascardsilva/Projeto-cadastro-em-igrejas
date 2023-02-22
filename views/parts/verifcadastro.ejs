@@ -30,9 +30,9 @@
         <td align="center"><%= data.getFullYear() - ano.getFullYear() %> </td>
         <td align="center"><%= verdados.endereco %> </td>
 
-        <form action="/editacadastro" method="post"></form>
+        <form action="/editacadastro/<%=verdados.id %>" method="post"></form>
         <input type="hidden" name="id" value="<%= verdados.id %>">
-        <td align="center"> <button class="botao_edit" >Edita</button></a> </td>
+        <td align="center"> <a href="/editacadastro/<%=verdados.id %>"><button class="botao_edit" >Edita</button></a> </td>
         </form>
 
         <form action="/delete" method="post">

@@ -299,7 +299,7 @@ nav a:focus {
 
 	max-width: 750px;
 	text-align: center;
-	margin: 80px auto;
+	margin: 40px auto;
   
   }
   
@@ -313,7 +313,7 @@ nav a:focus {
 	border-radius: 8px;
 	display: block;
 	width: 90%;
-	margin-top: 30px;
+	margin-top: 20px;
 	font-family:'open_sansregular';
 	font-size:16px;
 	color:#424242;
