@@ -28,16 +28,19 @@
         <td align="center"><%= verdados.telefone %></td>
 
         <!--Calcula a Idade corretamente-->
-        <% let dataAniversario = new Date(verdados.data); %>
         <% const hoje = new Date();%>
-        <%  const nascimento = new Date(dataAniversario);%>
-        <%  let idade = hoje.getFullYear() - nascimento.getFullYear();%>
-        <%  const meses = hoje.getMonth() - nascimento.getMonth();%>
+        <% const dataAniversario = new Date(verdados.data); %>
+        <% const nascimento = new Date(dataAniversario.getFullYear(), dataAniversario.getMonth(), dataAniversario.getDate());%>
+        <% let idade = hoje.getFullYear() - nascimento.getFullYear();%>
+        <% const meses = hoje.getMonth() - nascimento.getMonth();%>
+
         <% if (meses < 0 || (meses === 0 && hoje.getDate() < nascimento.getDate())) {%>
-        <% idade--;%>
+            <% idade--;%>
         <% }%>
-        <% idade += meses / 12;%>
-        <td align="center"><%= idade.toFixed(0) %> </td>
+
+        <td align="center"><%= idade %>  </td>
+
+
 
         <td align="center"><%= verdados.endereco %> </td>
 
